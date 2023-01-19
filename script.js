@@ -1,6 +1,19 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword } from  "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import {
+  getDatabase,
+  set,
+  ref,
+  child,
+  get,
+} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+
 
 const firebaseConfig = {
 	apiKey: "AIzaSyBAHZlNSWFpmRREARMlfqxDR-6UlfeshFM",
@@ -13,7 +26,7 @@ const firebaseConfig = {
   };
 
 const app = initializeApp(firebaseConfig);
-const database = getDatase(app);
+const database = getDatabase(app);
 const auth = getAuth();
 
 const submitButton = document.getElementById("submit");
@@ -94,10 +107,11 @@ submitButton.addEventListener("click", function() {
     });
 });
 
-signupButton.addEventListener("click", function() {
-    main.style.display = "none";
-    createacct.style.display = "block";
-});
+signupButton.addEventListener("click", () => {
+  main.style.display = 'none'
+  createacct.style.display = 'block'
+}
+)
 
 returnBtn.addEventListener("click", function() {
     main.style.display = "block";
