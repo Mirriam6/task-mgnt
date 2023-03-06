@@ -5,6 +5,6 @@ The app for now is open to everyone without any authentication. The tasks entere
 
 Go and checkout the app on the link provided.
 
-If you find any bugs or discrepencies drop me a mail at mirriammlaliki@gmail.com
+If you find any bugs or discrepencies drop me a mail at mirriammlaliki640@gmail.com
 
 Your feedback is much appreciated.
